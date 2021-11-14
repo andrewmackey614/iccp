@@ -1,0 +1,82 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  Bebas Neue;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.header__logo {
+    width: 120px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: bold
+}
+
+.nav a {
+    font-size: 22px;
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.nav a:hover {
+    color: black;
+}
+
+.teaser {
+    position: relative;
+    font-family: Bebas Neue;
+    font-size: 180px;
+
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100vh - 100px);
+
+    text-align: center;
+}
+
+@media(max-width: 876px) {
+    .teaser {
+        font-size: 120px;
+    }
+}
+
+.teaser::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: url(esports.jpg) center center/cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+
+.teaser span {
+    z-index: 100;
+}
